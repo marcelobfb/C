@@ -59,24 +59,68 @@ void linha()
 //     *pa=tmp;
 // }
 
-int main(){
-    char frase[100];
-    printf("Nome completo: ");
-    fgets(frase,sizeof(frase),stdin);
-    printf("Olá %s",frase);
-    return 0;
-}
+// int main(){
+//     char frase[100];
+//     printf("Nome completo: ");
+//     fgets(frase,sizeof(frase),stdin);
+//     printf("Olá %s",frase);
+//     return 0;
+// }
 
-void receberVetor(int vetor[]);
-int main(){
-    int numeros[4];
-    printf("Digite 4 numeros inteiros: ");
-    scanf("%d")
-    receberVetor(numeros);
+
+// exercico 1
+// void receberVetor(int vetor[], int* maior, int* menor);
+// int main() {
+//     int numeros[4];
+//     int maior, menor;
+//     for (int i = 0; i < sizeof(numeros) / sizeof(numeros[0]); i++) {
+//         printf("%d numero: ", i + 1);
+//         scanf("%d", &numeros[i]);
+//     }
+//     receberVetor(numeros, &maior, &menor);
+//     printf("Maior: %d\n", maior);
+//     printf("Menor: %d\n", menor);
+//     return 0;
+// }
+// void receberVetor(int vetor[], int* maior, int* menor) {
+//     *maior = vetor[0];
+//     *menor = vetor[0];
+//     for (int i = 1; i < 4; i++) {
+//         if (*(vetor+i) > *maior) {
+//             *maior = vetor[i];
+//         }
+//         if (*(vetor+i) < *menor) {
+//             *menor = vetor[i];
+//         }
+//     }
+// }
+
+float receberVetor(float vetor[], float* maior, float* menor,float* media);
+int main() {
+    float numeros[5];
+    float maior=0, menor=0;
+    float soma=0;
+    float media=0;
+    for (int i = 0; i < sizeof(numeros) / sizeof(numeros[0]); i++) {
+        printf("%d numero: ", i + 1);
+        scanf("%f", &numeros[i]);
+    }
+    receberVetor(numeros, &maior, &menor,&media);
+    printf("Maior: %.2f\n", maior);
+    printf("Menor: %.2f\n", menor);
+    printf("Media: %.2f\n", media);
     return 0;
 }
-void receberVetor(int vetor[]){
-    for(int i =0;i<sizeof(vetor);i++){
-        *(vetor+i)=i;
+float receberVetor(float vetor[], float* maior, float* menor,float* media) {
+    float soma=0;
+    for (int i = 0; i < 5; i++) {
+        if (*(vetor+i) > *maior) {
+            *maior = vetor[i];
+        }
+        if (*(vetor+i) < *menor||i==0) {
+            *menor = vetor[i];
+        }
+        soma+=vetor[i];
     }
+    *media=soma/5;
 }
