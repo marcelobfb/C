@@ -119,13 +119,13 @@ float receberVetor(float vetor[], float *maior, float *menor, float *media)
     {
         if (*(vetor + i) > *maior)
         {
-            *maior = vetor[i];
+            *maior = *(vetor + i);
         }
         if (*(vetor + i) < *menor || i == 0)
         {
-            *menor = vetor[i];
+            *menor = *(vetor + i);
         }
-        soma += vetor[i];
+        soma += *(vetor + i);
     }
     *media = soma / 5;
 }
