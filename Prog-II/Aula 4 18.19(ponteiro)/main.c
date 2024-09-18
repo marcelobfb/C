@@ -67,7 +67,6 @@ void linha()
 //     return 0;
 // }
 
-
 // exercico 1
 // void receberVetor(int vetor[], int* maior, int* menor);
 // int main() {
@@ -95,32 +94,38 @@ void linha()
 //     }
 // }
 
-float receberVetor(float vetor[], float* maior, float* menor,float* media);
-int main() {
+float receberVetor(float vetor[], float *maior, float *menor, float *media);
+int main()
+{
     float numeros[5];
-    float maior=0, menor=0;
-    float soma=0;
-    float media=0;
-    for (int i = 0; i < sizeof(numeros) / sizeof(numeros[0]); i++) {
+    float maior = 0, menor = 0;
+    float soma = 0;
+    float media = 0;
+    for (int i = 0; i < sizeof(numeros) / sizeof(numeros[0]); i++)
+    {
         printf("%d numero: ", i + 1);
         scanf("%f", &numeros[i]);
     }
-    receberVetor(numeros, &maior, &menor,&media);
+    receberVetor(numeros, &maior, &menor, &media);
     printf("Maior: %.2f\n", maior);
     printf("Menor: %.2f\n", menor);
     printf("Media: %.2f\n", media);
     return 0;
 }
-float receberVetor(float vetor[], float* maior, float* menor,float* media) {
-    float soma=0;
-    for (int i = 0; i < 5; i++) {
-        if (*(vetor+i) > *maior) {
+float receberVetor(float vetor[], float *maior, float *menor, float *media)
+{
+    float soma = 0;
+    for (int i = 0; i < 5; i++)
+    {
+        if (*(vetor + i) > *maior)
+        {
             *maior = vetor[i];
         }
-        if (*(vetor+i) < *menor||i==0) {
+        if (*(vetor + i) < *menor || i == 0)
+        {
             *menor = vetor[i];
         }
-        soma+=vetor[i];
+        soma += vetor[i];
     }
-    *media=soma/5;
+    *media = soma / 5;
 }
