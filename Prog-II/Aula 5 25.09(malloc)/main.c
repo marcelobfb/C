@@ -32,34 +32,112 @@
 //     free(p);
 //     return 0;
 // }
-#include <stdio.h>
-#include <stdlib.h>
 
-int main() {
-    float tamanho;
-    float media=0;
-    float parcial=0;
-    printf("tamanho do array: ");
-    scanf("%f", &tamanho);
+// exercicio 1
 
-    float* array = (float*) malloc(tamanho * sizeof(float));
-    if(array == NULL) {
-        printf("memoria n alocada\n");
-        exit(0);
+// int main()
+// {
+//     float tamanho;
+//     float media = 0;
+//     float parcial = 0;
+//     printf("Tamanho do array: ");
+//     scanf("%f", &tamanho);
+
+//     float *array = (float *)malloc(tamanho * sizeof(float));
+//     if (array == NULL)
+//     {
+//         printf("memoria n alocada\n");
+//         exit(0);
+//     }
+
+//     for (int i = 0; i < tamanho; i++)
+//     {
+//         printf("Digite numero %d: ", i + 1);
+//         scanf("%f", &array[i]);
+//         parcial = parcial + array[i];
+//     }
+//     media = parcial / tamanho;
+//     printf("Os numeros são:\n");
+//     for (int i = 0; i < tamanho; i++)
+//     {
+//         printf("Number %d: %.2f\n", i + 1, array[i]);
+//     }
+//     printf("A media é %.2f\n", media);
+//     free(array);
+
+//     return 0;
+// }
+
+// exercicio 2
+
+// int main()
+// {
+//     int menor = 0;
+//     int maior = 0;
+//     int **matriz = (int **)malloc(3 * sizeof(int *));
+//     if (matriz == NULL)
+//     {
+//         printf("memoria n alocada\n");
+//         exit(0);
+//     }
+//     for (int i = 0; i < 3; i++)
+//     {
+//         matriz[i] = (int *)malloc(2 * sizeof(int));
+//         for (int j = 0; j < 2; j++)
+//         {
+//             printf("Numero: ");
+//             scanf("%d", &matriz[i][j]);
+//             if (matriz[i][j] < menor || i == 0)
+//             {
+//                 menor = matriz[i][j];
+//             }
+//             if (matriz[i][j] > maior)
+//             {
+//                 maior = matriz[i][j];
+//             }
+//         }
+//     }
+//     for (int i = 0; i < 3; i++)
+//     {
+//         for (int j = 0; j < 2; j++)
+//         {
+//             printf("[%d]", matriz[i][j]);
+//         }
+//         printf("\n");
+//     }
+//     printf("O menor numero é %d e o maior é %d\n", menor, maior);
+//     return 0;
+// }
+
+// exercicio 3
+char *preencheAlfabeto(int tam);
+int main()
+{
+    int i, tam = 10;
+    char *vetor;
+    vetor = preencheAlfabeto(tam);
+    if (vetor != NULL)
+    {
+        for (i = 0; i < tam; i++)
+        {
+            printf("%c ", vetor[i]);
+        }
+        printf("\n");
+        free(vetor);
     }
-
-    for(int i = 0; i < tamanho; i++) {
-        printf("Digite numero %d: ", i+1);
-        scanf("%f", &array[i]);
-        parcial=parcial+array[i];
-    }
-    media=parcial/tamanho;
-    printf("Os numeros são:\n");
-    for(int i = 0; i < tamanho; i++) {
-        printf("Number %d: %.2f\n", i+1, array[i]);
-    }
-    printf("A media é %.2f\n",media);
-    free(array);
-
     return 0;
+}
+char *preencheAlfabeto(int tam)
+{
+    char *vetor = (char *)malloc(tam * sizeof(char));
+    if (vetor == NULL)
+    {
+        printf("erro ao alocar memoria\n");
+        return NULL;
+    }
+    for (int i = 0; i < tam; i++)
+    {
+        vetor[i] = 'a' + i;
+    }
+    return vetor;
 }
