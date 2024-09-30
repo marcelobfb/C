@@ -234,28 +234,61 @@
 // }
 
 // 7
+// #include <stdio.h>
+
+// int main()
+// {
+//     int matriz[3][3] = {
+//         {1, 2, 3},
+//         {4, 5, 6},
+//         {7, 8, 9}};
+//     int maior = 0;
+//     for (int i = 0; i < 3; i++)
+//     {
+//         for (int j = 0; j < 3; j++)
+//         {
+//             if (i + j < 2)
+//             {
+//                 if (matriz[i][j] > maior)
+//                 {
+//                     maior = matriz[i][j];
+//                 }
+//             }
+//         }
+//     }
+//     printf("O maior valor acima da diagonal secundária é %d.\n", maior);
+//     return 0;
+// }
+
+// 8
 #include <stdio.h>
 
 int main()
 {
-    int matriz[3][3] = {
-        {1, 2, 3},
-        {4, 5, 6},
-        {7, 8, 9}};
-    int maior = 0;
-    for (int i = 0; i < 3; i++)
+    float matriz[4][4] = {
+        {1, 2, 3, 4},
+        {5, 6, 7, 8},
+        {9, 10, 11, 12},
+        {13, 14, 15, 16}};
+        //  {0,0, 0,1, 0,2, 0,3},
+        // {1,0, 1,1, 1,2, 1,3},
+        // {2,0, 2,1, 2,2, 2,3},
+        // {3,0, 3,1, 3,2, 3,3}};
+    float parcial=0;
+    int count=0;
+    float media=0;
+    for (int i = 0; i < 4; i++)
     {
-        for (int j = 0; j < 3; j++)
+        for (int j = 0; j < 4; j++)
         {
-            if (i + j < 2)
+            if (i + j >=4)
             {
-                if (matriz[i][j] > maior)
-                {
-                    maior = matriz[i][j];
-                }
+                parcial=parcial+matriz[i][j];
+                count++;
             }
         }
     }
-    printf("O maior valor acima da diagonal secundária é %d.\n", maior);
+    media=parcial/count;
+    printf("A media é %.2f.\n", media);
     return 0;
 }
