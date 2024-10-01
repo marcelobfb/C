@@ -459,26 +459,39 @@
 // }
 
 // 14
-#include <stdio.h>
+// #include <stdio.h>
 
-int pontos(int vitoria, int empate);
+// int pontos(int vitoria, int empate);
 
-int main() {
-    int vitoria=0,empate=0,derrota=0;
-    printf("Quantas vitorias seu time tem: ");
-    scanf("%d",&vitoria);
-    printf("Quantos empate seu time tem: ");
-    scanf("%d",&empate);
-    printf("Quantas derrotas seu time tem: ");
-    scanf("%d",&derrota);
-    printf("Seu time tem uma media de %d pontos",pontos(vitoria,empate));
-    return 0;
-}
+// int main() {
+//     int vitoria=0,empate=0,derrota=0;
+//     printf("Quantas vitorias seu time tem: ");
+//     scanf("%d",&vitoria);
+//     printf("Quantos empate seu time tem: ");
+//     scanf("%d",&empate);
+//     printf("Quantas derrotas seu time tem: ");
+//     scanf("%d",&derrota);
+//     printf("Seu time tem uma media de %d pontos",pontos(vitoria,empate));
+//     return 0;
+// }
 
-int pontos(int vitoria, int empate){
-    int pvitoria=0,pempate=0;
-    pvitoria=vitoria*3;
-    pempate=empate/empate;
+// int pontos(int vitoria, int empate){
+//     int pvitoria=0,pempate=0;
+//     pvitoria=vitoria*3;
+//     pempate=empate/empate;
 
-    return pvitoria+pempate;
-}
+//     return pvitoria+pempate;
+// }
+
+// 15
+// a)25 -863510280 -863510280 25 50 -863510276
+// b)valor endereço endereço valor valor endereço
+// #include <stdio.h>
+// int main()
+// {
+//     int a = 25;
+//     int *pa = &a;
+//     int b = *pa + a;
+//     printf("%d %d %d %d %d %d\n", a, pa, &a, *pa, b, &b);
+//     return 0;
+// }
