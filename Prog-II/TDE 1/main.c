@@ -294,3 +294,106 @@
 // }
 
 // 9
+// #include <stdio.h>
+
+// int soma(int x,int y);
+// int subtracao(int x,int y);
+// int multiplicacao(int x,int y);
+// int divisao(int x,int y);
+
+// int main()
+// {
+//     int x=0,y=0;
+//     int resposta=0;
+//     int sair=2;
+//     printf("Qual primeiro numero: ");
+//     scanf("%d",&x);
+//     printf("Qual segundo numero: ");
+//     scanf("%d",&y);
+//     do{
+//         printf("Qual operação deseja: 1- Soma, 2- Subtração, 3-Multiplicação, 4-Divisão: ");
+//         scanf("%d",&resposta);
+//         sair=resposta;
+//     }while(sair<1||sair>4);
+//     if(resposta==1){
+//         printf("A soma dos numeros é %d\n",soma(x,y));
+//     }
+//     else if(resposta==2){
+//         printf("A subtração dos numeros é %d\n",subtracao(x,y));
+//     }
+//     else if(resposta==3){
+//         printf("A multiplicação dos numeros é %d\n",multiplicacao(x,y));
+//     }
+//     else if(resposta==4){
+//         printf("A divisão dos numeros é %d\n",divisao(x,y));
+//     }
+//     return 0;
+// }
+// int soma(int x,int y){
+//     return x+y;
+// }
+// int subtracao(int x,int y){
+//     return x-y;
+// }
+// int multiplicacao(int x,int y){
+//     return x*y;
+// }
+// int divisao(int x,int y){
+//     return x/y;
+// }
+
+// 10
+// #include <stdio.h>
+
+// int tabuada(int x);
+
+// int main()
+// {
+//     int n=0;
+//     printf("Digite um número: ");
+//     scanf("%d",&n);
+//     tabuada(n);
+//     return 0;
+// }
+// int tabuada(int x){
+//     if(x>7){
+//         for(int i=0;i<10;i++){
+//             printf("%d x %d = %d\n",x,i+1,x*(i+1));
+//         }
+//     }
+//     else{
+//         for(int i=0;i<10;i++){
+//             printf("7 x %d = %d\n",i+1,7*(i+1));
+//         }
+//     }
+//     return x;
+// }
+
+// 11
+// #include <stdio.h>
+
+// int bigger(int x,int y,int z);
+
+// int main()
+// {
+//     int n1=0,n2=0,n3=0;
+//     printf("Digite primeiro número: ");
+//     scanf("%d",&n1);
+//     printf("Digite segundo número: ");
+//     scanf("%d",&n2);
+//     printf("Digite terceiro número: ");
+//     scanf("%d",&n3);
+//     printf("O maior numero é %d\n",bigger(n1,n2,n3));
+//     return 0;
+// }
+// int bigger(int x, int y, int z) {
+//     int maior = 0;
+//     if (x >= y && x >= z) {
+//         maior = x;
+//     } else if (y >= x && y >= z) {
+//         maior = y;
+//     } else {
+//         maior = z;
+//     }
+//     return maior;
+// }
