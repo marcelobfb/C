@@ -429,31 +429,56 @@
 // }
 
 // 13
+// #include <stdio.h>
+
+// int soma(int x, int y, int z);
+// void media(int x);
+
+// int main() {
+//     int n1 = 0, n2 = 0, n3 = 0;
+//     printf("Digite primeiro número: ");
+//     scanf("%d", &n1);
+//     printf("Digite segundo número: ");
+//     scanf("%d", &n2);
+//     printf("Digite terceiro número: ");
+//     scanf("%d", &n3);
+//     int sum = soma(n1, n2, n3);
+//     media(sum);
+//     return 0;
+// }
+
+// int soma(int x, int y, int z) {
+//     int somaresultado = x + y + z;
+//     printf("A soma deles é %d\n", somaresultado);
+//     return somaresultado;
+// }
+
+// void media(int x) {
+//     float media = (float)x / 3;
+//     printf("A media deles é %.2f\n", media);
+// }
+
+// 14
 #include <stdio.h>
 
-int soma(int x, int y, int z);
-void media(int x);
+int pontos(int vitoria, int empate);
 
 int main() {
-    int n1 = 0, n2 = 0, n3 = 0;
-    printf("Digite primeiro número: ");
-    scanf("%d", &n1);
-    printf("Digite segundo número: ");
-    scanf("%d", &n2);
-    printf("Digite terceiro número: ");
-    scanf("%d", &n3);
-    int sum = soma(n1, n2, n3);
-    media(sum);
+    int vitoria=0,empate=0,derrota=0;
+    printf("Quantas vitorias seu time tem: ");
+    scanf("%d",&vitoria);
+    printf("Quantos empate seu time tem: ");
+    scanf("%d",&empate);
+    printf("Quantas derrotas seu time tem: ");
+    scanf("%d",&derrota);
+    printf("Seu time tem uma media de %d pontos",pontos(vitoria,empate));
     return 0;
 }
 
-int soma(int x, int y, int z) {
-    int somaresultado = x + y + z;
-    printf("A soma deles é %d\n", somaresultado);
-    return somaresultado;
-}
+int pontos(int vitoria, int empate){
+    int pvitoria=0,pempate=0;
+    pvitoria=vitoria*3;
+    pempate=empate/empate;
 
-void media(int x) {
-    float media = (float)x / 3;
-    printf("A media deles é %.2f\n", media);
+    return pvitoria+pempate;
 }
