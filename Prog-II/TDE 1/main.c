@@ -397,3 +397,35 @@
 //     }
 //     return maior;
 // }
+
+// 12
+// #include <stdio.h>
+
+// float aumentosalarial(float salario, char exp);
+
+// int main()
+// {
+//     float salario=0;
+//     char exp;
+
+//     printf("Digite seu salario: ");
+//     scanf("%f",&salario);
+//     printf("Digite sua experiencia(s - Sênior, p - Pleno ou j - Júnior): ");
+//     scanf(" %s",&exp);
+//     printf("O novo salario é %.2f",aumentosalarial(salario,exp));
+//     return 0;
+// }
+// float aumentosalarial(float salario, char exp) {
+//     float aumento=0;
+//     switch(exp){
+//         case 's':aumento=salario*0.05;
+//         break;
+//         case 'p':aumento=salario*0.10;
+//         break;
+//         case 'j':aumento=salario*0.15;
+//         break;
+//     }
+//     return salario+aumento;
+// }
+
+// 13
