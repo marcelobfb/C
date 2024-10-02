@@ -495,3 +495,43 @@
 //     printf("%d %d %d %d %d %d\n", a, pa, &a, *pa, b, &b);
 //     return 0;
 // }
+// 16
+#include <stdio.h>
+
+void contar_vogais(char *str, int *numCaracteres);
+int main()
+{
+    char str[] = "Hello, World!";
+    int numCaracteres;
+
+    contar_vogais(str, &numCaracteres);
+
+    printf("Número de caracteres: %d\n", numCaracteres);
+
+    return 0;
+}
+void contar_vogais(char *str, int *numCaracteres)
+{
+    int vogais = 0;
+    *numCaracteres = 0;
+
+    while (*str != '\0')
+    {
+        (*numCaracteres)++; // incrementa o número de caracteres
+
+        switch (*str)
+        {
+        case 'a':
+        case 'e':
+        case 'i':
+        case 'o':
+        case 'u':
+            vogais++; // incrementa o número de vogais
+            break;
+        }
+
+        str++; // move para o próximo caractere
+    }
+
+    printf("Número de vogais: %d\n", vogais);
+}
