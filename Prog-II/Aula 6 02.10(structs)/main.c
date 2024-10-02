@@ -90,5 +90,5 @@ int main() {
     return 0;
 }
 void recebe(pessoa tmp){
-    printf("O nome da pessoa é %sMora na rua %sNa cidade %sNo estado %s",tmp.nome,tmp.endereco.rua,tmp.endereco.cidade,tmp.endereco.estado);
+    printf("\nO nome da pessoa é %sMora na rua %sNa cidade %sNo estado %s",tmp.nome,tmp.endereco.rua,tmp.endereco.cidade,tmp.endereco.estado);
 }
