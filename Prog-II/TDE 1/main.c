@@ -503,22 +503,17 @@ int main()
 {
     char str[] = "Hello, World!";
     int numCaracteres;
-
     contar_vogais(str, &numCaracteres);
-
     printf("Número de caracteres: %d\n", numCaracteres);
-
     return 0;
 }
 void contar_vogais(char *str, int *numCaracteres)
 {
     int vogais = 0;
     *numCaracteres = 0;
-
     while (*str != '\0')
     {
-        (*numCaracteres)++; // incrementa o número de caracteres
-
+        (*numCaracteres)++;
         switch (*str)
         {
         case 'a':
@@ -526,12 +521,10 @@ void contar_vogais(char *str, int *numCaracteres)
         case 'i':
         case 'o':
         case 'u':
-            vogais++; // incrementa o número de vogais
+            vogais++;
             break;
         }
-
-        str++; // move para o próximo caractere
+        str++;
     }
-
     printf("Número de vogais: %d\n", vogais);
 }
