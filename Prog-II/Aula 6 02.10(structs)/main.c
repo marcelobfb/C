@@ -27,29 +27,68 @@
 //     printf("Media: %.2f\n", aluno.media);
 //     return 0;
 // }
+
+// 2
+
+// #include <stdio.h>
+
+// struct tempo {
+//     int horas;
+//     int minutos;
+// };
+
+// typedef struct tempo tempo;
+
+// tempo minutoparahora(int x);
+
+// int main() {
+//     int totalMinutos;
+//     printf("Digite o número de minutos: ");
+//     scanf("%d", &totalMinutos);
+//     tempo resultado = minutoparahora(totalMinutos);
+//     printf("%d minutos equivalem a %d horas e %d minutos.\n", totalMinutos, resultado.horas, resultado.minutos);
+//     return 0;
+// }
+
+// tempo minutoparahora(int x) {
+//     tempo temp;
+//     temp.horas = x / 60;
+//     temp.minutos = x % 60;
+//     return temp;
+// }
+
+// 3
+
 #include <stdio.h>
 
-struct tempo {
-    int horas;
-    int minutos;
+struct endereco {
+    char rua[80];
+    char cidade[80];
+    char estado[80];
 };
+typedef struct endereco endereco;
 
-typedef struct tempo tempo;
+struct pessoa {
+    char nome[80];
+    endereco endereco;
+};
+typedef struct pessoa pessoa;
 
-tempo minutoparahora(int x);
+void recebe(pessoa tmp);
 
 int main() {
-    int totalMinutos;
-    printf("Digite o número de minutos: ");
-    scanf("%d", &totalMinutos);
-    tempo resultado = minutoparahora(totalMinutos);
-    printf("%d minutos equivalem a %d horas e %d minutos.\n", totalMinutos, resultado.horas, resultado.minutos);
+    pessoa p1;
+    printf("Qual seu nome: ");
+    fgets(p1.nome,80,stdin);
+    printf("Qual sua rua: ");
+    fgets(p1.endereco.rua,80,stdin);
+    printf("Qual sua cidade: ");
+    fgets(p1.endereco.cidade,80,stdin);
+    printf("Qual seu estado: ");
+    fgets(p1.endereco.estado,80,stdin);
+    recebe(p1);
     return 0;
 }
-
-tempo minutoparahora(int x) {
-    tempo temp;
-    temp.horas = x / 60;
-    temp.minutos = x % 60;
-    return temp;
+void recebe(pessoa tmp){
+    printf("O nome da pessoa é %sMora na rua %sNa cidade %sNo estado %s",tmp.nome,tmp.endereco.rua,tmp.endereco.cidade,tmp.endereco.estado);
 }
