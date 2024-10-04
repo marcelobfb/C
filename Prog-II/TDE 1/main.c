@@ -788,17 +788,27 @@
 
 // 25
 
-int main(){
+#include <stdio.h>
+#include <stdlib.h>
 
+int main(){
     int linha = 3, coluna = 3, escalar;
     int **matriz;
     matriz = (int**)malloc(linha * sizeof(int*));
     if(matriz == NULL){
-        printf("ERRO");
+        printf("ERRO: Memória insuficiente\n");
         return 1;
     }
     for(int i = 0; i < linha; i++){
         matriz[i] = (int*)malloc(coluna * sizeof(int));
+        if(matriz[i] == NULL){
+            printf("ERRO: Memória insuficiente\n");
+            for(int j = 0; j < i; j++){
+                free(matriz[j]);
+            }
+            free(matriz);
+            return 1;
+        }
     }
     for(int i = 0; i < linha; i++) {
         for(int j = 0; j < coluna; j++){
