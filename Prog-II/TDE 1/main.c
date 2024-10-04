@@ -496,35 +496,334 @@
 //     return 0;
 // }
 // 16
-#include <stdio.h>
+// #include <stdio.h>
 
-void contar_vogais(char *str, int *numCaracteres);
-int main()
-{
-    char str[] = "Hello, World!";
-    int numCaracteres;
-    contar_vogais(str, &numCaracteres);
-    printf("Número de caracteres: %d\n", numCaracteres);
-    return 0;
-}
-void contar_vogais(char *str, int *numCaracteres)
-{
-    int vogais = 0;
-    *numCaracteres = 0;
-    while (*str != '\0')
-    {
-        (*numCaracteres)++;
-        switch (*str)
-        {
-        case 'a':
-        case 'e':
-        case 'i':
-        case 'o':
-        case 'u':
-            vogais++;
-            break;
-        }
-        str++;
+// void contar_vogais(char *str, int *numCaracteres);
+// int main()
+// {
+//     char str[] = "Hello, World!";
+//     int numCaracteres;
+//     contar_vogais(str, &numCaracteres);
+//     printf("Número de caracteres: %d\n", numCaracteres);
+//     return 0;
+// }
+// void contar_vogais(char *str, int *numCaracteres)
+// {
+//     int vogais = 0;
+//     *numCaracteres = 0;
+//     while (*str != '\0')
+//     {
+//         (*numCaracteres)++;
+//         switch (*str)
+//         {
+//         case 'a':
+//         case 'e':
+//         case 'i':
+//         case 'o':
+//         case 'u':
+//             vogais++;
+//             break;
+//         }
+//         str++;
+//     }
+//     printf("Número de vogais: %d\n", vogais);
+// }
+// void calcular_hexagono(float l, float *area, float *perimetro);
+
+// int main(){
+//     float l = 0, area= 0, perimetro = 0;
+//     printf("Digite o lado do lado do hexagono: ");
+//     scanf("%f", &l);
+//     calcular_hexagono(l, &area, &perimetro);
+//     printf("Area: %.2f\nPerimetro: %.2f", area, perimetro);
+// }
+
+// void calcular_hexagono(float l, float *area, float *perimetro){
+//     *area = (3*(pow(l, 2))*sqrt(3))/2;
+//     *perimetro = 6*l;
+// }
+
+
+
+
+//Número 18
+// char validarSituacao(float p1, float p2, float p3, int faltas, int aulas, float *media, float *porcentagem);
+
+// int main(){
+//     float n1, n2, n3, media, porcentagem;
+//     int faltas, aulas;
+    
+//     printf("Digite a nota 1: ");
+//     scanf("%f", &n1);
+//     printf("Digite a nota 2: ");
+//     scanf("%f", &n2);
+//     printf("Digite a nota 3: ");
+//     scanf("%f", &n3);
+//     printf("Quantidade de aulas: ");
+//     scanf("%d", &aulas);
+//     printf("Quantidade de faltas: ");
+//     scanf("%d", &faltas);
+    
+
+//     switch(validarSituacao(n1, n2, n3, faltas, aulas, &media, &porcentagem)){
+//         case 'A':
+//         printf("Sua media foi: %.2f\n", media);
+//         printf("Porcentagem de faltas: %.1f%%\n", porcentagem);
+//         printf("Situacao: Aprovado!");
+//         break;
+
+//         case 'R':
+//         printf("Sua media foi: %.2f\n", media);
+//         printf("Porcentagem de faltas: %.1f%%\n", porcentagem);
+//         printf("Situacao: Reprovado!");
+//         break;
+
+//         case 'F':
+//         printf("Sua media foi: %.2f\n", media);
+//         printf("Porcentagem de faltas: %.1f%%\n", porcentagem);
+//         printf("Situacao: Reprovado por falta!");
+//         break;
+
+//     }
+// }
+
+// char validarSituacao(float p1, float p2, float p3, int faltas, int aulas, float *media, float *porcentagem){
+//     *media = (p1 + p2 + p3) / 3;
+//     *porcentagem = (faltas * 100) / aulas;
+//     if(*porcentagem > 25){
+//         return 'F';
+//     } else{
+//         if(*media >= 6){
+//             return 'A';
+//         } else{
+//             return 'R';
+//         }
+//     }
+// }
+
+
+
+//Número 19
+
+// int verificar_pares (int *v);
+
+// int main(){
+//     int vetor[6];
+//     int qtdpares = 0;
+//     for(int i = 0; i < 6; i++){
+//         printf("Digite o valor na posicao %d: ", i+1);
+//         scanf("%d", &vetor[i]); 
+//     }
+//     qtdpares = verificar_pares(vetor);
+//     printf("Quantidade de pares: %d", qtdpares);
+//     return 0;
+// }
+
+// int verificar_pares(int *v){
+//     int qtdPares = 0;
+//     for(int i = 0; i < 6; i++){
+//         if(*(v+i) % 2 == 0){
+//             qtdPares++;
+//         }
+//     }
+//     return qtdPares;
+// }
+
+
+//Número 20
+
+// int inverter_vetor(int *v1, int *v2, int n);
+
+// int main(){
+//     int tamanho, maior;
+//     printf("Digite o tamanho do vetor: ");
+//     scanf("%d", &tamanho);
+//     int vetor[tamanho], vetorInverso[tamanho];
+//     for(int i = 0; i < tamanho; i++){
+//         printf("Digite o valor na posicao %d: ", i + 1);
+//         scanf("%d", &vetor[i]);
+//     }
+//     maior = inverter_vetor(vetor, vetorInverso, tamanho);
+//     printf("Vetor invertido: ");
+//     for(int i = 0; i < tamanho; i++){
+//         printf("%d ", vetorInverso[i]);
+//     }
+//     printf("\nMaior valor: %d", maior);
+
+//     return 0;
+// }
+
+
+//Número 21
+
+// void multiplicar_escalar(int *v1, int *v2, int x, int n);
+
+// int main(){
+
+//     int tamanhoVetor;
+//     int numMultiplicado;
+//     printf("Digite o tamanho de vetor: ");
+//     scanf("%d", &tamanhoVetor);
+//     int vetor1[tamanhoVetor], vetor2[tamanhoVetor];
+//     for(int i = 0; i < tamanhoVetor; i++){
+//         printf("Digite o valor na posicao %d: ", i+1);
+//         scanf("%d", &vetor1[i]);
+//     }
+//     printf("Digite o valor que deseja multiplicar o vetor: ");
+//     scanf("%d", &numMultiplicado);
+//     multiplicar_escalar(vetor1, vetor2, tamanhoVetor, numMultiplicado);
+//     printf("Vetor multiplicado por %d: ", numMultiplicado);
+//     for(int i = 0; i < tamanhoVetor; i++){
+//         printf("%d ", vetor2[i]);
+//     }
+//     return 0;
+// }
+
+// void multiplicar_escalar(int *v1, int *v2, int x, int n){
+//     for(int i = 0; i < x; i++){
+//         *(v2 + i) = *(v1 + i) * n; 
+//     }
+// }
+
+
+//Número 22
+
+// int main(){
+
+//     int *v, soma = 0;
+//     v = (int*)malloc(5 * sizeof(int));
+//     if(v == NULL){
+//         printf("Error. Memoria insuficiente.");
+//         return 1;
+//     }
+//     for(int i = 0; i < 5; i++){
+//         printf("Digite o valor na posicao %d: ", i+1);
+//         scanf("%d", &v[i]);
+//         soma+=v[i];
+//     }
+//     printf("Soma: %d", soma);
+
+//      free(v);
+
+//     return 0;
+// }
+
+
+//Número 23
+
+// int main(){
+//     int tamanho;
+//     printf("Digite o tamanho do vetor: ");
+//     scanf("%d", &tamanho);
+//     int *v1;
+//     v1 = (int*)malloc(tamanho * sizeof(int));
+//     if(v1 == NULL){
+//         printf("ERRO. Memoria insuficiente");
+//         return 1;
+//     }
+//     for(int i = 0; i < tamanho; i++){
+//         printf("Digite o valor na posicao %d: ", i+1);
+//         scanf("%d", &v1[i]);
+//     }
+//     int *copia;
+//     copia = (int*)malloc(tamanho * sizeof(int));
+//     for(int i = 0; i < tamanho; i++){
+//         copia[i] = v1[i];
+//         printf("%d ", copia[i]);
+//     }
+//     free(v1);
+//     free(copia);
+//     return 0;
+//}
+
+
+//Número 24
+
+// int main(){
+
+//     int *vetor, remover = 0, tamanho = 5;
+//     vetor = (int*)malloc(tamanho * sizeof(int));
+//     if(vetor == NULL){
+//         printf("ERRO.");
+//         return 1;
+//     }
+//     for(int i = 0; i < tamanho; i++){
+//         printf("Digite um valor na posicao %d:", i+1);
+//         scanf("%d", &vetor[i]);
+//     }
+//     printf("Vetor: ");
+//     for(int i = 0; i < tamanho; i++){
+//         printf("%d ", vetor[i]);
+//     }
+//     printf("Selecione um valor para remover: ");
+//     scanf("%d", &remover);
+
+//     int i,j;
+//     for(i = 0; i < tamanho; i++){
+//         if(vetor[i] == remover){
+//             break;
+//         }
+//     }
+//     if(i < tamanho){
+//         for(j = i; j < tamanho-1; j++){
+//             vetor[j] = vetor[j + 1];
+//         }
+//         tamanho--;
+//     } else{
+//         printf("Valor nao encontrado no vetor.");
+//     }
+//     vetor = realloc(vetor, tamanho * sizeof(int));
+//     if (vetor == NULL && tamanho > 0) {
+//         printf("ERRO: Falha ao redimensionar o vetor.\n");
+//         return 1;
+//     }
+//     printf("Vetor com o valor removido: ");
+//     for(int i = 0; i < tamanho; i++){
+//         printf("%d ", vetor[i]);
+//     }
+//     free(vetor);
+//     return 0;
+// }
+
+
+//Número 25
+
+int main(){
+
+    int linha = 3, coluna = 3, escalar;
+    int **matriz;
+    matriz = (int**)malloc(linha * sizeof(int*));
+    if(matriz == NULL){
+        printf("ERRO");
+        return 1;
     }
-    printf("Número de vogais: %d\n", vogais);
+    for(int i = 0; i < linha; i++){
+        matriz[i] = (int*)malloc(coluna * sizeof(int));
+    }
+    for(int i = 0; i < linha; i++) {
+        for(int j = 0; j < coluna; j++){
+            printf("Digite um valor na posicao[%d][%d]: ", i, j);
+            scanf("%d", &matriz[i][j]);
+        }
+    }
+    printf("Digite o escalar: ");
+    scanf("%d", &escalar);
+    for(int i = 0; i < linha; i++) {
+        for(int j = 0; j < coluna; j++){
+            matriz[i][j]*=escalar;
+        }
+    }
+    printf("Matriz multiplicado com a escalar: \n");
+    for(int i = 0; i < linha; i++) {
+        for(int j = 0; j < coluna; j++){
+            printf("%d ", matriz[i][j]);
+        }
+        printf("\n");
+    }
+    for(int i = 0; i < linha; i++){
+        free(matriz[i]);
+    }
+    free(matriz);
+
+    return 0;
 }
