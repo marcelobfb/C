@@ -495,6 +495,7 @@
 //     printf("%d %d %d %d %d %d\n", a, pa, &a, *pa, b, &b);
 //     return 0;
 // }
+
 // 16
 // #include <stdio.h>
 
@@ -530,6 +531,8 @@
 // }
 // void calcular_hexagono(float l, float *area, float *perimetro);
 
+// 17
+//#include <stdio.h>
 // int main(){
 //     float l = 0, area= 0, perimetro = 0;
 //     printf("Digite o lado do lado do hexagono: ");
@@ -547,6 +550,7 @@
 
 
 // 18
+//#include <stdio.h>
 // char validarSituacao(float p1, float p2, float p3, int faltas, int aulas, float *media, float *porcentagem);
 
 // int main(){
@@ -604,7 +608,7 @@
 
 
 // 19
-
+//#include <stdio.h>
 // int verificar_pares (int *v);
 
 // int main(){
@@ -631,7 +635,7 @@
 
 
 // 20
-
+//#include <stdio.h>
 // int inverter_vetor(int *v1, int *v2, int n);
 
 // int main(){
@@ -655,7 +659,7 @@
 
 
 // 21
-
+//#include <stdio.h>
 // void multiplicar_escalar(int *v1, int *v2, int x, int n);
 
 // int main(){
@@ -687,7 +691,7 @@
 
 
 // 22
-
+//#include <stdio.h>
 // int main(){
 
 //     int *v, soma = 0;
@@ -710,7 +714,7 @@
 
 
 // 23
-
+//#include <stdio.h>
 // int main(){
 //     int tamanho;
 //     printf("Digite o tamanho do vetor: ");
@@ -738,7 +742,7 @@
 
 
 // 24
-
+//#include <stdio.h>
 // int main(){
 
 //     int *vetor, remover = 0, tamanho = 5;
@@ -787,7 +791,6 @@
 
 
 // 25
-
 #include <stdio.h>
 #include <stdlib.h>
 
