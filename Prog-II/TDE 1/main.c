@@ -546,7 +546,7 @@
 
 
 
-//Número 18
+// 18
 // char validarSituacao(float p1, float p2, float p3, int faltas, int aulas, float *media, float *porcentagem);
 
 // int main(){
@@ -603,7 +603,7 @@
 
 
 
-//Número 19
+// 19
 
 // int verificar_pares (int *v);
 
@@ -630,7 +630,7 @@
 // }
 
 
-//Número 20
+// 20
 
 // int inverter_vetor(int *v1, int *v2, int n);
 
@@ -654,7 +654,7 @@
 // }
 
 
-//Número 21
+// 21
 
 // void multiplicar_escalar(int *v1, int *v2, int x, int n);
 
@@ -686,7 +686,7 @@
 // }
 
 
-//Número 22
+// 22
 
 // int main(){
 
@@ -709,7 +709,7 @@
 // }
 
 
-//Número 23
+// 23
 
 // int main(){
 //     int tamanho;
@@ -737,7 +737,7 @@
 //}
 
 
-//Número 24
+// 24
 
 // int main(){
 
@@ -786,7 +786,7 @@
 // }
 
 
-//Número 25
+// 25
 
 int main(){
 
