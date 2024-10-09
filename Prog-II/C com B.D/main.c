@@ -19,7 +19,7 @@ void cadastrar_nome()
     while (1)
     {
         fgets(nome, MAX_NOME, stdin);
-        nome[strcspn(nome, "\n")] = 0; // Remove o caractere de nova linha
+        nome[strcspn(nome, "\n")] = 0;
 
         if (strcmp(nome, "sair") == 0)
         {
@@ -62,10 +62,9 @@ void deletar_nome()
     }
 
     char nome[MAX_NOME];
-    char nomes[100][MAX_NOME]; // Array para armazenar nomes
+    char nomes[100][MAX_NOME];
     int contador = 0;
 
-    // Lê todos os nomes do arquivo
     while (fgets(nome, MAX_NOME, arquivo) != NULL)
     {
         nome[strcspn(nome, "\n")] = 0; // Remove o caractere de nova linha
