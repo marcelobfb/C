@@ -22,7 +22,7 @@
 //     // Preenchendo os dados
 //     printf("Digite o nome da cidade: ");
 //     scanf(" %[^\n]s", cidade1.nome);
-//     printf("Digite o número de habitantes: ");
+//     printf("Digite o numero de habitantes: ");
 //     scanf("%d", &cidade1.nHabitantes);
 //     printf("Digite o nome do prefeito: ");
 //     scanf(" %[^\n]s", cidade1.prefeito);
@@ -34,12 +34,12 @@
 //     scanf(" %[^\n]s", prefeito1.sexo);
 
 //     // Exibindo os dados
-//     printf("\nInformações da Cidade:\n");
+//     printf("\nInformacoes da Cidade:\n");
 //     printf("Nome: %s\n", cidade1.nome);
-//     printf("Número de Habitantes: %d\n", cidade1.nHabitantes);
+//     printf("Numero de Habitantes: %d\n", cidade1.nHabitantes);
 //     printf("Prefeito: %s\n", cidade1.prefeito);
 
-//     printf("\nInformações do Prefeito:\n");
+//     printf("\nInformacoes do Prefeito:\n");
 //     printf("Nome: %s\n", prefeito1.nome);
 //     printf("Idade: %d\n", prefeito1.idade);
 //     printf("Sexo: %s\n", prefeito1.sexo);
@@ -74,26 +74,26 @@ void calcularBonus(funcionario *func, int qtd) {
 
 void exibirBonus(funcionario *func, int qtd) {
     for (int i = 0; i < qtd; i++) {
-        printf("\nFuncionário: %s\n", func[i].nome);
+        printf("\nFuncionario: %s\n", func[i].nome);
         printf("Anos de empresa: %d\n", func[i].anosEmpresa);
-        printf("Bônus Final: %.2f\n", func[i].bonusFinal);
+        printf("Bonus Final: %.2f\n", func[i].bonusFinal);
     }
 }
 
 int main() {
     int qtdFuncionarios;
-    printf("Digite a quantidade de funcionários: ");
+    printf("Digite a quantidade de funcionarios: ");
     scanf("%d", &qtdFuncionarios);
 
     funcionario *funcionarios = malloc(qtdFuncionarios * sizeof(funcionario));
 
     for (int i = 0; i < qtdFuncionarios; i++) {
-        printf("\nDigite o nome do funcionário %d: ", i + 1);
+        printf("\nDigite o nome do funcionario %d: ", i + 1);
         scanf(" %[^\n]s", funcionarios[i].nome);
         printf("Digite os anos de empresa: ");
         scanf("%d", &funcionarios[i].anosEmpresa);
 
-        printf("Digite os salários mensais (12 valores):\n");
+        printf("Digite os salarios mensais (12 valores):\n");
         for (int j = 0; j < 12; j++) {
             scanf("%f", &funcionarios[i].salarios[j]);
         }
